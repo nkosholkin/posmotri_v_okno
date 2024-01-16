@@ -58,6 +58,8 @@ ol {
   margin: 0 auto;
 }
 
+/* Левая часть */
+
 .result {
   display: flex;
   flex-direction: column;
@@ -111,6 +113,9 @@ ol {
   cursor: pointer;
   width: fit-content;
 }
+
+
+
 
 .search-form__label:focus {
   outline: none;
@@ -232,7 +237,6 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox {
 
 .content__card-link:hover {
   text-decoration: underline 1px #FFF;
-  text-underline-position: under;
 }
 
 .content__video-card-title {
@@ -241,11 +245,11 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox {
   font-size: 30px;
   font-style: normal;
   font-weight: 700;
-  line-height: 100%; /* 30px */
+  line-height: 100%;
   text-transform: uppercase;
   text-overflow: ellipsis;
-  overflow: hidden;
   white-space: nowrap;
+  overflow: hidden;
 }
 
 .content__video-card-description {
@@ -256,6 +260,8 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox {
   font-weight: 400;
   line-height: 16.2px; /* 90% */
   text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .content__video-card {
@@ -272,7 +278,6 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox {
 .content__video-card-description-container {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   gap: 6px;
   width: 200px;
 }
@@ -294,20 +299,16 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox {
 
 .button:hover {
   text-decoration: underline 1px #FFF;
-  text-underline-position: under;
 }
 
 .button {
   cursor: pointer;
   text-align: center;
-  justify-content: center;
-  align-items: center;
-  display: flex;
   height: 34px;
   border: 1px solid #FFF;
   background: transparent;
   color: #FFF;
-  font-family: 'Fira Sans Condensed';
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
