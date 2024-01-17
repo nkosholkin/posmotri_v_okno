@@ -290,7 +290,6 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox {
 /* кнопки */
 
 .button {
-  flex-shrink: 0;
   height: 34px;
   border: 1px solid #fff;
   color: #fff;
