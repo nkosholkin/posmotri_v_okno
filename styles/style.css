@@ -29,25 +29,25 @@ ol {
 
 .visually-hidden {
   position: absolute;
-  inline-size: 1px;
-  block-size: 1px;
   overflow: hidden;
   clip: rect(0 0 0 0);
+  inline-size: 1px;
+  block-size: 1px;
   clip-path: inset(50%);
   white-space: nowrap;
 }
 
 .page {
-  inline-size: 1200px;
-  block-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: auto;
   color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  inline-size: 1200px;
+  block-size: 100%;
 }
 
 .content {
@@ -70,7 +70,6 @@ ol {
   position: relative;
   width: 711px;
   height: 386px;
-
 }
 
 .result__video {
@@ -86,18 +85,18 @@ ol {
 }
 
 .search-form__fieldset {
-  border: none;
   display: flex;
   flex-direction: column;
   gap: 5px;
   width: fit-content;
+  border: none;
 }
 
 .search-form__fieldset-title {
-  color: #FFF;
+  color: #fff;
+  font-weight: 400;
   font-size: 18px;
   font-style: normal;
-  font-weight: 400;
   line-height: normal;
 }
 
@@ -108,8 +107,8 @@ ol {
 
 .search-form__label {
   display: flex;
-  gap: 5px;
   align-items: center;
+  gap: 5px;
   cursor: pointer;
 }
 
@@ -118,50 +117,51 @@ ol {
 }
 
 .search-form__label:hover .search-form__label-text {
-  text-decoration: underline 1px #FFF;
+  text-decoration: underline 1px #fff;
 }
 
-.search-form__label:has(:focus-visible)  {
-  outline: 1px solid #FFF;
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid #fff;
   outline-offset: 1px;
 }
 
 @supports not selector(:has(:focus-visible)) {
   /* Для работы обводки в Firefox (проверял на macOS) */
+
   .search-form__label:focus-within {
-    outline: 1px solid #FFF;
+    outline: 1px solid #fff;
     outline-offset: 1px;
   }
 }
 
 .search-form__pseudo-checkbox {
+  display: block;
   width: 19px;
   height: 19px;
-  border: 1px solid #FFF;
-  display: block;
+  border: 1px solid #fff;
 }
 
-input[type='checkbox']:checked + .search-form__pseudo-checkbox {
-  height: 19px;
+input[type="checkbox"]:checked + .search-form__pseudo-checkbox {
   width: 19px;
+  height: 19px;
   outline: 1px solid #000;
   outline-offset: -2px;
-  background-color: #FFF;
+  background-color: #fff;
 }
 
 .search-form__textfield {
-  color: rgba(255, 255, 255, 0.70);
+  border: none;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  color: rgb(255 255 255 / 0.7);
   font-family: inherit;
+  font-weight: 400;
   font-size: inherit;
   font-style: normal;
-  font-weight: 400;
   line-height: normal;
   text-align: start;
   background: none;
-  outline: none;
-  border: none;
-  border-top: 1px solid #FFF;
-  border-bottom: 1px solid #FFF;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -169,38 +169,36 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox {
 }
 
 .search-form__textfield::placeholder {
-  color: rgba(255, 255, 255, 0.70);
+  color: rgb(255 255 255 / 0.7);
   font-family: inherit;
+  font-weight: 400;
   font-size: inherit;
   font-style: normal;
-  font-weight: 400;
   line-height: normal;
   text-align: left;
-
 }
 
 .search-form__textfield:active {
-  outline: 1px solid #FFF;
   border-color: transparent;
+  outline: 1px solid #fff;
 }
-
 
 /* правая часть */
 
 .content__details {
-  width: 399px;
   display: flex;
   flex-direction: column;
-  gap: 26px;
   justify-content: start;
+  gap: 26px;
+  width: 399px;
 }
 
 .title {
-  color: #FFF;
-  font-family: 'Oswald';
+  color: #fff;
+  font-family: Oswald;
+  font-weight: 700;
   font-size: 75px;
   font-style: normal;
-  font-weight: 700;
   line-height: 94%;
   text-transform: uppercase;
 }
@@ -224,10 +222,10 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox {
 }
 
 .content__card-link {
-  text-decoration: none;
   display: block;
-  padding: 2px;
   margin: 2px;
+  padding: 2px;
+  text-decoration: none;
 }
 
 .content__card-link:focus {
@@ -235,7 +233,7 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox {
 }
 
 .content__card-link:focus-visible {
-  outline: 1px solid #FFF;
+  outline: 1px solid #fff;
 }
 
 .content__card-link:active {
@@ -243,32 +241,32 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox {
 }
 
 .content__card-link:hover {
-  text-decoration: underline 1px #FFF;
+  text-decoration: underline 1px #fff;
 }
 
 .content__video-card-title {
-  color: #FFF;
-  font-family: 'Oswald';
+  overflow: hidden;
+  color: #fff;
+  font-family: Oswald;
+  font-weight: 700;
   font-size: 30px;
   font-style: normal;
-  font-weight: 700;
   line-height: 100%;
   text-transform: uppercase;
   text-overflow: ellipsis;
   white-space: nowrap;
-  overflow: hidden;
 }
 
 .content__video-card-description {
-  color: #FFF;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  overflow: hidden;
+  color: #fff;
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 400;
   font-size: 18px;
   font-style: normal;
-  font-weight: 400;
   line-height: 16.2px; /* 90% */
   text-overflow: ellipsis;
   white-space: nowrap;
-  overflow: hidden;
 }
 
 .content__video-card {
@@ -291,12 +289,27 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox {
 
 /* кнопки */
 
+.button {
+  flex-shrink: 0;
+  height: 34px;
+  border: 1px solid #fff;
+  color: #fff;
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  font-style: normal;
+  line-height: normal;
+  text-align: center;
+  background: transparent;
+  cursor: pointer;
+}
+
 .buton:focus {
   outline: none;
 }
 
 .button:focus-visible {
-  outline: 1px solid #FFF;
+  outline: 1px solid #fff;
   outline-offset: 1px;
 }
 
@@ -305,27 +318,12 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox {
 }
 
 .button:hover {
-  text-decoration: underline 1px #FFF;
-}
-
-.button {
-  cursor: pointer;
-  text-align: center;
-  height: 34px;
-  border: 1px solid #FFF;
-  background: transparent;
-  color: #FFF;
-  font-family: 'Fira Sans Condensed', sans-serif;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  flex-shrink: 0;
+  text-decoration: underline 1px #fff;
 }
 
 .search-form__submit-button {
-  width: 194px;
   align-self: flex-end;
+  width: 194px;
 }
 
 .more-button {
