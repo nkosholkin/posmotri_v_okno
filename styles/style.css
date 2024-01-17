@@ -121,7 +121,7 @@ ol {
   text-decoration: underline 1px #FFF;
 }
 
-.search-form__label:has(:focus-visible) {
+.search-form__label:has(:focus-visible)  {
   outline: 1px solid #FFF;
   outline-offset: 1px;
 }
@@ -183,6 +183,7 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox {
   outline: 1px solid #FFF;
   border-color: transparent;
 }
+
 
 /* правая часть */
 
@@ -332,5 +333,6 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox {
   max-width: 395px;
   margin: 2px;
   /* из-за overflow: auto пришлось поираться с размерами,
-  иначе outline показывался только у верхней границы .more-button */
+  иначе outline показывался только у верхней границы .more-button.
+  Можно еще submit-button поднять на 2px, но будут расхождения с макетом */
 }
