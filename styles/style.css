@@ -114,16 +114,12 @@ ol {
   width: fit-content;
 }
 
-
-
-
 .search-form__label:focus {
   outline: none;
 }
 
 .search-form__label:hover .search-form__label-text {
   text-decoration: underline 1px #FFF;
-  text-underline-position: under;
 }
 
 .search-form__label:has(:focus-visible) {
