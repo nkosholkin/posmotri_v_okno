@@ -254,7 +254,7 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox {
   text-transform: uppercase;
   text-overflow: ellipsis;
   white-space: nowrap;
-  max-width: 200px;
+  max-width: 199px;
 }
 
 .content__video-card-description {
@@ -278,6 +278,7 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox {
 
 .content__video-card-thumbnail {
   width: 194px;
+  min-width: 194px;
   height: 103px;
   object-fit: cover;
 }
