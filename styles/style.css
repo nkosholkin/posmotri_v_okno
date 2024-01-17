@@ -169,11 +169,11 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox {
 
 .search-form__textfield::placeholder {
   color: rgb(255 255 255 / 0.7);
-  text-align: left;
 }
 
 .search-form__textfield:focus {
   outline: none;
+  outline-offset: 0;
 }
 
 .search-form__textfield:active {
@@ -328,8 +328,7 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox {
 }
 
 .more-button {
-  width: 100%;
-  max-width: 395px;
+  width: calc(100% - 4px);
   margin: 2px;
   /* из-за overflow: auto пришлось поираться с размерами,
   иначе outline показывался только у верхней границы .more-button.
