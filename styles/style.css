@@ -181,6 +181,7 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox {
 .search-form__textfield:active {
   border-color: transparent;
   outline: 1px solid #fff;
+  outline-offset: 1px;
 }
 
 /* правая часть */
